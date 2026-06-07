@@ -27,3 +27,4 @@ pet_vsplit_pane_key=${pet_vsplit_pane_key:-$default_pet_vsplit_pane_key}
 default_pet_hsplit_pane_key=''
 pet_hsplit_pane_key=$(tmux show-option -gqv "@pet-horizontal-split-pane-key")
 pet_hsplit_pane_key=${pet_hsplit_pane_key:-$default_pet_hsplit_pane_key}
+

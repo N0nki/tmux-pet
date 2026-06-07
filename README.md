@@ -2,7 +2,6 @@
 
 This plugin calls [pet](https://github.com/knqyf263/pet) via tmux.
 
-
 ## Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
@@ -19,7 +18,6 @@ Finally, reload tmux:
 
     // type this in terminal
     $ tmux source-file ~/.tmux.conf
-
 
 ## Manual Installation
 
@@ -40,11 +38,10 @@ Finally, reload tmux:
     // type this in terminal
     $ tmux source-file ~/.tmux.conf
 
-
 ## Plugin options
 
 | Options                          | Description                                                               |
-|:---------------------------------|:--------------------------------------------------------------------------|
+| :------------------------------- | :------------------------------------------------------------------------ |
 | `@pet-path`                      | Path to `pet` binary.                                                     |
 | `@pet-pane-size`                 | Size of pane to display `pet` command. (e.g. `10`)                        |
 | `@pet-pane-percentage`           | Percentage of pane to display `pet` command. (e.g. `50`)                  |
