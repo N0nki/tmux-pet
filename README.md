@@ -10,9 +10,10 @@ Add plugin to the list of TPM plugins in `.tmux.conf`:
 
 Hit `prefix + I` to fetch the plugin and source it.
 
-Add `@pet-new-pane-key`, `@pet-vertical-split-pane-key` and/or `@pet-horizontal-split-pane-key` in `.tmux.conf`:
+Add `@pet-new-pane-key`, `@pet-vertical-split-pane-key`, `@pet-horizontal-split-pane-key` and/or `@pet-popup-window-key` in `.tmux.conf`:
 
     set -g @pet-new-pane-key 'C-f'
+    set -g @pet-popup-window-key 'C-p'
 
 Finally, reload tmux:
 
@@ -29,9 +30,10 @@ Add this line to the bottom of `.tmux.conf`:
 
     run-shell ~/clone/path/pet.tmux
 
-Add `@pet-new-pane-key`, `@pet-vertical-split-pane-key` and/or `@pet-horizontal-split-pane-key` in `.tmux.conf`:
+Add `@pet-new-pane-key`, `@pet-vertical-split-pane-key`, `@pet-horizontal-split-pane-key` and/or `@pet-popup-window-key` in `.tmux.conf`:
 
     set -g @pet-new-pane-key 'C-f'
+    set -g @pet-popup-window-key 'C-p'
 
 Finally, reload tmux:
 
@@ -48,3 +50,6 @@ Finally, reload tmux:
 | `@pet-new-pane-key`              | Key binding for opening new full size pane to display `pet` command.      |
 | `@pet-vertical-split-pane-key`   | Key binding for opening vertically split pane to display `pet` command.   |
 | `@pet-horizontal-split-pane-key` | Key binding for opening horizontally split pane to display `pet` command. |
+| `@pet-popup-window-key`          | Key binding for opening floating popup window to display `pet` command.   |
+| `@pet-popup-width`               | Width of popup window. (default: `80%`)                                   |
+| `@pet-popup-height`              | Height of popup window. (default: `60%`)                                  |

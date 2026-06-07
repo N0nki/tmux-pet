@@ -13,4 +13,6 @@ fi
 if [ -n "$pet_hsplit_pane_key" ]; then
   tmux bind-key "$pet_hsplit_pane_key" run-shell "$CURRENT_DIR/scripts/split_window.sh #{pane_id} h"
 fi
-
+if [ -n "$pet_popup_window_key" ]; then
+  tmux bind-key "$pet_popup_window_key" run-shell "$CURRENT_DIR/scripts/popup_window.sh #{pane_id}"
+fi
