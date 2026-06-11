@@ -9,7 +9,7 @@ source "$CURRENT_DIR/variables.sh"
 
 if ! command -v "$pet_path" >/dev/null 2>&1; then
   tmux display-message "$pet_path is not found."
-  return
+  exit 0
 fi
 
 options=()
@@ -24,4 +24,7 @@ elif [ -n "$pet_pane_size" ]; then
   options+=(-l "$pet_pane_size")
 fi
 
-tmux split-window "${options[@]}" tmux\ send-keys\ -t\ "$1"\ \"\$\("$pet_path"\ search\)\"
+# Expand the command substitution in the tmux split shell.
+# shellcheck disable=SC2016
+printf -v search_command 'tmux send-keys -t %q "$(%q)"' "$1" "$CURRENT_DIR/search.sh"
+tmux split-window "${options[@]}" "$search_command"

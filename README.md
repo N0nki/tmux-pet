@@ -14,6 +14,7 @@ Add `@pet-new-pane-key`, `@pet-vertical-split-pane-key`, `@pet-horizontal-split-
 
     set -g @pet-new-pane-key 'C-f'
     set -g @pet-popup-window-key 'C-p'
+    set -g @pet-preview-syntax-highlight 'on'
 
 Finally, reload tmux:
 
@@ -34,6 +35,7 @@ Add `@pet-new-pane-key`, `@pet-vertical-split-pane-key`, `@pet-horizontal-split-
 
     set -g @pet-new-pane-key 'C-f'
     set -g @pet-popup-window-key 'C-p'
+    set -g @pet-preview-syntax-highlight 'on'
 
 Finally, reload tmux:
 
@@ -53,3 +55,10 @@ Finally, reload tmux:
 | `@pet-popup-window-key`          | Key binding for opening floating popup window to display `pet` command.   |
 | `@pet-popup-width`               | Width of popup window. (default: `80%`)                                   |
 | `@pet-popup-height`              | Height of popup window. (default: `60%`)                                  |
+| `@pet-preview-syntax-highlight`  | Enable fzf preview with syntax highlighting. (e.g. `on`)                  |
+| `@pet-preview-window`            | fzf preview window layout. (default: `right:60%:wrap`)                    |
+| `@pet-preview-language`          | Syntax language passed to `bat`. (default: `sh`)                          |
+
+Syntax-highlighted preview requires `fzf` as pet's selector and uses `bat` when available. Set pet's `selectcmd` to include ANSI support, for example:
+
+    SelectCmd = "fzf --ansi --layout=reverse --border --height=90%"

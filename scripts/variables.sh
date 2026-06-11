@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # @pet-path
 default_pet_path='pet'
 pet_path=$(tmux show-option -gqv "@pet-path")
@@ -42,3 +44,18 @@ pet_popup_width=${pet_popup_width:-$default_pet_popup_width}
 default_pet_popup_height='60%'
 pet_popup_height=$(tmux show-option -gqv "@pet-popup-height")
 pet_popup_height=${pet_popup_height:-$default_pet_popup_height}
+
+# @pet-preview-syntax-highlight
+default_pet_preview_syntax_highlight='off'
+pet_preview_syntax_highlight=$(tmux show-option -gqv "@pet-preview-syntax-highlight")
+pet_preview_syntax_highlight=${pet_preview_syntax_highlight:-$default_pet_preview_syntax_highlight}
+
+# @pet-preview-window
+default_pet_preview_window='right:60%:wrap'
+pet_preview_window=$(tmux show-option -gqv "@pet-preview-window")
+pet_preview_window=${pet_preview_window:-$default_pet_preview_window}
+
+# @pet-preview-language
+default_pet_preview_language='sh'
+pet_preview_language=$(tmux show-option -gqv "@pet-preview-language")
+pet_preview_language=${pet_preview_language:-$default_pet_preview_language}
